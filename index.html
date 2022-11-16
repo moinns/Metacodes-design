@@ -8,7 +8,7 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./public/scss/css/style.css" />
     <script
       src="https://kit.fontawesome.com/8c54c40269.js"
       crossorigin="anonymous"
@@ -34,12 +34,14 @@
       <div class="nav_wrapper">
         <div class="navitems">
           <div class="nav">
-            <h4>Duplicate</h4>
+            <a href=""><h4>Duplicate</h4></a>
             <i class="fa-solid fa-circle"></i>
-            <h4><i class="fa-solid fa-magnifying-glass"></i>Search</h4>
+            <a href=""
+              ><h4><i class="fa-solid fa-magnifying-glass"></i>Search</h4></a
+            >
             <i class="fa-solid fa-circle"></i>
-            <h4>Login</h4>
-            <div class="login"><i class="fa-solid fa-user"></i></div>
+            <a href="./regform.html"><h4>Login</h4></a>
+            <div id="acc" class="login"><i class="fa-solid fa-user"></i></div>
           </div>
         </div>
         <div class="burger"><span></span></div>
@@ -55,22 +57,22 @@
           We work as a remote programming team for Korean rocket start-ups. Join
           as a long-term team member rather than outsourcing.
         </p>
-        <a id="project" href="#">See Running Projects</a>
+        <a class="project" href="#">See Running Projects</a>
       </div>
-      <img src="./img/children.png" alt="" />
+      <img src="./public/img/children.png" alt="" />
     </div>
     <div class="wrapper">
       <div class="swiper-button-prev"></div>
       <div class="image-slider swiper-container">
         <div class="slide_wrapper swiper-wrapper">
           <div class="images swiper-slide">
-            <img src="./img/forbes.png" alt="" />
+            <img src="./public/img/forbes.png" alt="" />
           </div>
           <div class="images swiper-slide">
-            <img src="./img/buisnes.png" alt="" />
+            <img src="./public/img/buisnes.png" alt="" />
           </div>
           <div class="images swiper-slide">
-            <img src="./img/protocol.png" alt="" />
+            <img src="./public/img/protocol.png" alt="" />
           </div>
         </div>
       </div>
@@ -121,9 +123,9 @@
     <div class="about">
       <div class="content">
         <div class="imgs">
-          <img class="img1" src="./img/1img.png" alt="" />
-          <img class="img2" src="./img/2img.png" alt="" />
-          <img class="img3" src="./img/3img.png" alt="" />
+          <img class="img1" src="./public/img/1img.png" alt="" />
+          <img class="img2" src="./public/img/2img.png" alt="" />
+          <img class="img3" src="./public/img/3img.png" alt="" />
         </div>
         <div class="dropbox">
           <div class="boxHead">
@@ -244,11 +246,11 @@
             </li>
             <li>People who enjoy logical thinking and problem solving</li>
           </ul>
-          <a id="project" href="#">See Running Projects</a>
+          <a class="project" href="#">See Running Projects</a>
         </div>
         <div class="project_photo">
-          <img src="./img/code.png" alt="" />
-          <img src="./img/dots.png" alt="" />
+          <img src="./public/img/code.png" alt="" />
+          <img src="./public/img/dots.png" alt="" />
         </div>
       </div>
     </div>
@@ -301,7 +303,8 @@
       </div>
     </div>
     <div class="block4">
-      <div>
+      <span class="dark"></span>
+      <div class="main-block">
         <p>
           <b
             >A position under <br />
@@ -309,55 +312,63 @@
           ><br />
           Become a member of the Metacoders team.
         </p>
-        <a id="project" href="">View all Positions</a>
+        <input
+          type="button"
+          class="project"
+          class="position-view"
+          id="position-view"
+          value="View all Positions"
+        />
       </div>
-      <div>
-        <div class="text1">
-          <h1>Junior Project Manager(한국어 필수)</h1>
-          <p><i class="fa-solid fa-clock"></i>Full-Time</p>
-          <a href="">Full Description</a>
+      <div class="modal-position">
+        <div>
+          <div class="text1">
+            <h1>Junior Project Manager(한국어 필수)</h1>
+            <p><i class="fa-solid fa-clock"></i>Full-Time</p>
+            <a href="">Full Description</a>
+          </div>
+          <a class="project" href="">Apply now</a>
         </div>
-        <a id="project" href="">Apply now</a>
-      </div>
-      <div>
-        <div class="text1">
-          <h1>Admin Staff</h1>
-          <p><i class="fa-solid fa-clock"></i>Full-Time</p>
-          <a href="">Full Description</a>
+        <div>
+          <div class="text1">
+            <h1>Admin Staff</h1>
+            <p><i class="fa-solid fa-clock"></i>Full-Time</p>
+            <a href="">Full Description</a>
+          </div>
+          <a class="project" href="">Apply now</a>
         </div>
-        <a id="project" href="">Apply now</a>
-      </div>
-      <div>
-        <div class="text1">
-          <h1>HR</h1>
-          <p><i class="fa-solid fa-clock"></i>Full-Time</p>
-          <a href="">Full Description</a>
+        <div>
+          <div class="text1">
+            <h1>HR</h1>
+            <p><i class="fa-solid fa-clock"></i>Full-Time</p>
+            <a href="">Full Description</a>
+          </div>
+          <a class="project" href="">Apply now</a>
         </div>
-        <a id="project" href="">Apply now</a>
-      </div>
-      <div>
-        <div class="text1">
-          <h1>Project Manager as Scrum Master</h1>
-          <p><i class="fa-solid fa-clock"></i>Full-Time</p>
-          <a href="">Full Description</a>
+        <div>
+          <div class="text1">
+            <h1>Project Manager as Scrum Master</h1>
+            <p><i class="fa-solid fa-clock"></i>Full-Time</p>
+            <a href="">Full Description</a>
+          </div>
+          <a class="project" href="">Apply now</a>
         </div>
-        <a id="project" href="">Apply now</a>
-      </div>
-      <div>
-        <div class="text1">
-          <h1>Finance & Accounting Manager</h1>
-          <p><i class="fa-solid fa-clock"></i>Full-Time</p>
-          <a href="">Full Description</a>
+        <div>
+          <div class="text1">
+            <h1>Finance & Accounting Manager</h1>
+            <p><i class="fa-solid fa-clock"></i>Full-Time</p>
+            <a href="">Full Description</a>
+          </div>
+          <a class="project" href="">Apply now</a>
         </div>
-        <a id="project" href="">Apply now</a>
-      </div>
-      <div>
-        <div class="text1">
-          <h1>Back-end Software Engineer</h1>
-          <p><i class="fa-solid fa-clock"></i>Full-Time</p>
-          <a href="">Full Description</a>
+        <div>
+          <div class="text1">
+            <h1>Back-end Software Engineer</h1>
+            <p><i class="fa-solid fa-clock"></i>Full-Time</p>
+            <a href="">Full Description</a>
+          </div>
+          <a class="project" href="">Apply now</a>
         </div>
-        <a id="project" href="">Apply now</a>
       </div>
     </div>
     <div class="block5">
@@ -375,6 +386,36 @@
       </div>
     </div>
     <footer>Copyright. Nasif Sabbir. All rights reserved</footer>
+
+    <div class="modal-wrapper">
+      <div class="modal">
+        <div class="modal-acc-details">
+          <img src="./public/img/profpic.png" alt="" />
+          <div class="acc-name">
+            <h3>Name: User</h3>
+            <h3>Surname: User</h3>
+            <h3>Email: user@gmail.com</h3>
+          </div>
+          <input type="button" class="project" value="Edit" />
+        </div>
+        <div class="acc-bio">
+          <h3>BIO:</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum
+            nihil voluptates, illo sequi eius numquam eaque non a in
+            voluptatibus dolorum possimus vero! Aspernatur ut necessitatibus
+            consequuntur praesentium ea optio.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <h2>Exit</h2>
+          <i class="fa-solid fa-circle"></i>
+          <h2>Show Details</h2>
+          <i class="fa-solid fa-circle"></i>
+          <h2>Invite friends</h2>
+        </div>
+      </div>
+    </div>
   </body>
   <script
     src="https://code.jquery.com/jquery-3.6.0.js"

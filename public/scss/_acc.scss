@@ -1,0 +1,21 @@
+.logout {
+  color: #fff;
+  background: #343437;
+  transition: all 0.3s linear;
+  width: 100%;
+  font-weight: bold;
+  font-size: 14px;
+  display: block;
+  height: 45px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 45px;
+  cursor: pointer;
+  border: none;
+  padding: 0.2em 1em;
+
+  &:hover {
+    filter: invert(1);
+  }
+}

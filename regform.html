@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="width=device-width" , name="viewport" , scale="1" />
+    <link rel="stylesheet" href="./public/scss/css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/8c54c40269.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Metacoders</title>
+  </head>
+  <body>
+    <header>
+      <h3>
+        <a href="/">
+          <i class="fa-regular fa-envelope-open"></i>hello@Metacoders
+        </a>
+      </h3>
+      <div class="ic">
+        <a href="#">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+      </div>
+      <div class="log">
+        <div class="login">
+          <a href="/login"><i class="fa-solid fa-user"></i></a>
+        </div>
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+    </header>
+
+    <main>
+      <div class="circle"></div>
+      <div class="register-form-container">
+        <form method="post" action="/reg">
+          <h1 class="form-title">Create new account</h1>
+
+          <div class="form-fields">
+            <div class="form-field">
+              <input type="text" name="name" placeholder="Name" required />
+            </div>
+            <div class="form-field">
+              <input type="email" name="email" placeholder="Email" required />
+            </div>
+            <div class="form-field">
+              <input
+                type="password"
+                name="password"
+                placeholder="password"
+                required
+                minlength="8"
+                maxlength="128"
+              />
+            </div>
+          </div>
+          <div class="form-buttons">
+            <button type="submit" class="button">Create new account</button>
+            <div class="divider">or</div>
+            <a href="/login" class="button button-google">Login</a>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <div class="block5">
+      <h1>Metacoders</h1>
+      <div class="footer_nav">
+        <a href="">Dublicate</a>
+        <a href="">Search</a>
+        <a href="">Login</a>
+      </div>
+      <div class="footer_icon">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      </div>
+    </div>
+    <div class="bttop"><i class="fas fa-angle-up"></i></div>
+  </body>
+</html>
