@@ -32,7 +32,7 @@ body {
   overflow-x: hidden;
 
   &.lock {
-    overflow: hidden;
+    position: fixed;
   }
 }
 header {
@@ -225,6 +225,16 @@ header a {
     padding: 0 6em;
     * {
       align-self: center;
+      margin: 0;
+      border: none;
+      background-color: rgba(0, 0, 0, 0);
+      color: black;
+      &:hover {
+        filter: none;
+        color: rgb(255, 255, 255);
+        background-color: #343437;
+        border: 1px solid #000;
+      }
     }
   }
 }
@@ -363,6 +373,7 @@ header a {
 }
 
 .project {
+  cursor: pointer;
   text-decoration: none;
   color: #fff;
   padding: 22px 44px;
@@ -779,7 +790,7 @@ header a {
     left: 0;
     position: fixed;
     width: 100%;
-    height: 100vh;
+    height: 450vh;
     background-color: rgba(0, 0, 0, 0.284);
   }
   span.active {
@@ -855,7 +866,7 @@ header a {
     top: 17%;
     left: 17%;
     position: fixed;
-    height: 700px;
+    height: 60%;
     width: 65%;
     z-index: 10;
 

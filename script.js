@@ -1,3 +1,5 @@
+const screen = $(window).width();
+
 new Swiper('.image-slider', {
   navigation: {
     nextEl: '.swiper-button-next',
@@ -17,11 +19,12 @@ $(document).ready(function () {
   $('.modal-wrapper').css('display', 'none');
 
   $('.content .boxHead').on('click', accordeon);
+
   $('.burger').on('click', function () {
     $(this).toggleClass('active');
     $('.nav').toggleClass('active');
     $('.navitems').toggleClass('active');
-    $('body').toggleClass('lock');
+    if (screen <= 340) $('body').toggleClass('lock');
   });
 
   $('.nav *').on('click', function () {
@@ -32,37 +35,47 @@ $(document).ready(function () {
   });
 
   $('#acc').on('click', () => {
-    var container = $('.modal-wrapper');
-    container.toggleClass('show');
-    container.css('display', 'block');
-    if (!container.hasClass('show')) {
-      setTimeout(() => {
-        container.css('display', 'none');
-      }, 300);
+    if (screen > 340) {
+      var container = $('.modal-wrapper');
+      container.toggleClass('show');
+      container.css('display', 'block');
+      if (!container.hasClass('show')) {
+        setTimeout(() => {
+          container.css('display', 'none');
+        }, 300);
+      }
     }
   });
 
   $('#position-view').on('click', () => {
     var container = $('.modal-position');
+
     container.toggleClass('show');
+
     $('.dark').addClass('active');
-    $('body').css('overflow', 'hidden');
+
+    if (screen <= 340) {
+      $('body').addClass('lock');
+    } else {
+      $('body').css('overflow', 'hidden');
+    }
+
     if (!container.hasClass('show')) {
       setTimeout(() => {
         container.css('display', 'none');
       }, 300);
     }
-  });
-
-  $(document).mouseup(function (e) {
-    if ($('.modal-wrapper').has(e.target).length === 0) {
-      $('.modal-wrapper').removeClass('show');
-    }
-    if ($('.modal-position').has(e.target).length === 0) {
-      $('.modal-position').removeClass('show');
-      $('.dark').removeClass('active');
-      $('body').css('overflow', 'auto');
-    }
+    $(document).mouseup(function (e) {
+      if ($('.modal-wrapper').has(e.target).length === 0) {
+        $('.modal-wrapper').removeClass('show');
+      }
+      if ($('.modal-position').has(e.target).length === 0) {
+        $('.modal-position').removeClass('show');
+        $('.dark').removeClass('active');
+        if (screen <= 340) $('body').removeClass('lock');
+        else $('body').css('overflow', 'auto');
+      }
+    });
   });
 });
 
